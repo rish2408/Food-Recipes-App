@@ -1,0 +1,241 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body {
+  background-image: url("https://i.pinimg.com/originals/e5/fa/63/e5fa634399bd7bb9391bcb87ba2caa8f.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+a
+{
+    cursor: pointer;
+}
+#navbar {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(97, 95, 95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#details {
+  width: 40%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+#details>input
+{
+    display: block;
+    font-size: 25px;
+    width: 50%;
+    margin: auto;
+    padding: 1% 5px;
+    border-radius: 20px;
+}
+
+#receipe {
+  width: 40%;
+  height: 20px;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+#user {
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#others {
+  width: 40%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: midnightblue;
+  font-family: sans-serif;
+}
+
+#appendwaladiv {
+  width: 50%;
+  height: 400px;
+  margin: auto;
+  margin-top: 50px;
+  font-family: sans-serif;
+  border-radius: 5px;
+}
+
+#cont {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  color: white;
+}
+
+img {
+  width: 100%;
+  height: 400px;
+  border-radius: 5px;
+}
+
+#signup-form-div {
+    width: 30%;
+    height: 600px;
+    margin: auto;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+form>input {
+    width: 92%;
+    height: 50px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 60px;
+}
+
+#butn1 {
+    margin-left: 130px;
+    width: 40%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: black;
+    border: 0px;
+}
+
+#button {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  #button:hover {background-color: blueviolet}
+  
+  #button:active {
+    background-color: blueviolet;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #butn {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  #butn:hover {background-color: blueviolet}
+  
+  #butn:active {
+    background-color: blueviolet;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .register-form
+  {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 600px;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0 , 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  .register-form>h2
+  {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .register-form .name-box
+  {
+    position: relative;
+  }
+  .register-form .name-box input
+  {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+
+  label
+  {
+    color: #fff;
+  }
+  .submitBtn
+  {
+    background-color: aquamarine;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+.submitBtn2
+{
+    background-color: white;
+    color: black;
+    border: 2px solid goldenrod;
+}
+.submitBtn2:hover
+{
+    background-color: goldenrod;
+    color: white;
+}
+.submit-box
+{
+    text-align: center;
+}

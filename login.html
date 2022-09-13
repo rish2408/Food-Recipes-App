@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div id="navbar">
+
+    </div>
+    <div class="register-form">
+        <h2>Login Into Your Existing Account</h2>
+        <br><br>
+        <form id="formLogin" onsubmit="loginUser(event)">
+                <div class="name-box">
+                    <label for="username">Username*</label>
+                    <input id="username" type="text" required>
+                </div>
+                <div class="name-box">
+                    <label for="password">Password*</label>
+                    <input id="password" type="password" required>
+                </div>
+            <div class="submit-box">
+                <input class="submitBtn submitBtn2" type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+<script type="module">
+
+    import navbar from "./components/navbar.js";
+    document.getElementById("navbar").innerHTML = navbar();
+
+</script>
+<script src="./scripts/main.js"></script>

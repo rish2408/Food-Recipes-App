@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipe Of The Day</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div id="navbar">
+
+    </div>
+    <div>
+        <div id="cont">
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="module">
+
+    import navbar from "./components/navbar.js";
+
+    document.getElementById("navbar").innerHTML = navbar();
+
+
+    let url = `https://themealdb.com/api/json/v1/1/random.php`;
+    async function getData() {
+        try {
+            let res = await fetch(url);
+            let data = await res.json();
+            console.log(data);
+            append(data.meals[0])
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    getData();
+
+    function append(data) {
+
+        let div = document.createElement("div");
+        div.setAttribute("id", "appendwaladiv")
+
+
+        let cont = document.getElementById("cont");
+        cont.innerHTML = null;
+
+        let image = document.createElement("img");
+        image.src = data.strMealThumb;
+
+        let h3 = document.createElement("h3");
+        h3.innerText = `Receipe of: ${data.strMeal}`;
+
+        let p1 = document.createElement("p");
+        p1.innerText = `Category: ${data.strCategory}`;
+
+        let p2 = document.createElement("p");
+        p2.innerText = `Area: ${data.strArea}`;
+
+        let p3 = document.createElement("p");
+        p3.innerText = `Instructions: ${data.strInstructions}`;
+
+
+
+
+
+
+
+
+        div.append(image, h3, p1, p2, p3);
+        cont.append(div);
+
+
+
+    }
+
+    var userData = JSON.parse(localStorage.getItem("signin"));
+
+    var user = document.querySelector("#user")
+
+    if (userData != null) {
+        user.innerHTML = ` <h2> Kapil </h2>
+        <h2> </h2>`
+    }
+
+
+</script>

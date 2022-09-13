@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food app</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <div id="navbar">
+    <div id="details">
+        <h2 style="margin-right: 10px;"> <a href="index.html">Food App</a> </h2>
+        <input type="text" id="receipe" placeholder="Search Recipe">
+        <button id="butn" >Search</button>
+      </div>
+    
+      <div id="others">
+        <h2> <a href="recipe.html">Receipe of the day</a> </h2>
+    
+      </div>
+    
+      <div id="user">
+        <h2 id="dynamicName"></h2>
+        <h2> <a onclick="logoutUser()">Logout</a> </h2>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id="cont">
+
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<script>
+  document.getElementById("butn").addEventListener("click", getData)
+
+  async function getData() {
+
+    let city = document.getElementById('receipe').value;
+
+    let url = `https://themealdb.com/api/json/v1/1/search.php?s=${city}`;
+
+
+    let res = await fetch(url);
+
+    let data = await res.json();
+    append(data.meals[0]);
+    console.log(data);
+  }
+
+
+  function append(data) {
+
+    let div = document.createElement("div");
+    div.setAttribute("id", "appendwaladiv")
+
+
+    let cont = document.getElementById("cont");
+    cont.innerText = "";
+
+    let image = document.createElement("img");
+    image.src = data.strMealThumb;
+
+    let h3 = document.createElement("h3");
+    h3.innerText = `Receipe of: ${data.strMeal}`;
+
+    let p1 = document.createElement("p");
+    p1.innerText = `Category: ${data.strCategory}`;
+
+    let p2 = document.createElement("p");
+    p2.innerText = `Area: ${data.strArea}`;
+
+    let p3 = document.createElement("p");
+    p3.innerText = `Instructions: ${data.strInstructions}`;
+
+    div.append(image, h3, p1, p2, p3);
+    cont.append(div);
+
+  }
+
+  function authenticateUser(){
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        if(!user){
+            //invalid login
+            window.location.href = "index.html";
+        }
+    }
+    function logoutUser(){
+        /* logout user */
+        localStorage.removeItem("user");
+        authenticateUser();
+    }
+
+    function loadDynamicData(){
+        /* load user data */
+        const user = JSON.parse(localStorage.getItem("user"));
+        document.getElementById("dynamicName").innerHTML = user.username;
+    }
+
+    loadDynamicData();
+    authenticateUser();
+
+</script>
