@@ -8,7 +8,7 @@ This is a web app to search recipes
 
 ## Deployed Link
 
-- [Food Recipes App] https://chic-chimera-75d0d0.netlify.app/
+- [Food Recipes App](https://chic-chimera-75d0d0.netlify.app)
 
 ## Tech Stack
 
